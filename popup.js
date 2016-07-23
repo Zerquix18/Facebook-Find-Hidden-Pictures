@@ -81,7 +81,7 @@ function main(tabs) {
   var profileWithUserName    = /^([A-Za-z0-9\.]+){4,}/ .test(user);
   var profileWithoutUserName = /profile\.php\?id=[\d]+/.test(user);
 
-  if (! profileWithUserName || profileWithoutUserName) {
+  if (! profileWithUserName || ! profileWithoutUserName) {
     displayResult('error', 'Please go to a valid Facebook profile');
     return;
   }
