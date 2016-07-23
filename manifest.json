@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook Find Hidden Pictures",
+  "description": "This extension allows you to find hidden pictures of people in Facebook. ",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": {
+      "19": "img/19.png",
+      "38": "img/38.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Click here to get the hidden pictures!"
+  },
+  
+  "icons": {
+    "16":  "img/16.png",
+    "48":  "img/48.png",
+    "128": "img/128.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "notifications",
+    "https://www.facebook.com/*"
+  ]
+  
+}
