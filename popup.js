@@ -77,11 +77,11 @@ function main(tabs) {
   }
   // remove the url and keep the username:
   var user                   = currentUrl.substr(start.length); // <--semicolon
-      user                   = user.trim("/\\\s\n\0"); // just in case
+      user                   = user.trim("\/\\\s\n\0"); // just in case
   var profileWithUserName    = /^([A-Za-z0-9\.]+){4,}/ .test(user);
   var profileWithoutUserName = /profile\.php\?id=[\d]+/.test(user);
 
-  if (! profileWithUserName || ! profileWithoutUserName) {
+  if (! (profileWithUserName || profileWithoutUserName)) {
     displayResult('error', 'Please go to a valid Facebook profile');
     return;
   }
